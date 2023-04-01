@@ -5,7 +5,7 @@ variable "custom_dns_name" {
 
 variable "location" {
   type = string
-  default = "southcentralus"
+  default = "westus2"
 }
 
 variable "resource_group_name" {
