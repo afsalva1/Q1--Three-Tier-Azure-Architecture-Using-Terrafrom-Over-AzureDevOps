@@ -8,9 +8,12 @@ terraform {
     } 
   }
 }
+
 provider "azurerm" {
   features {}
 }
+
+# Backedned Storeage for State File 
 terraform {
   backend "azurerm" {
     
