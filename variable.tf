@@ -1,16 +1,16 @@
 variable "custom_dns_name" {
   type = string
-  default = "labinstance"
+  default = "labinstanceafsal"
 }
 
 variable "location" {
   type = string
-  default = "westus2"
+  default = "southindia"
 }
 
 variable "resource_group_name" {
   type = string
-  default = "lab_afsal_instance"
+  default = "lab_instance_afsal"
 }
 
 
