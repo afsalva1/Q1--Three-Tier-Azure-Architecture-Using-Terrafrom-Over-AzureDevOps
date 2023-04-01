@@ -5,7 +5,7 @@ resource "azurerm_linux_virtual_machine" "vm-web" {
   location            = azurerm_resource_group.afsal_app_rg.location
   resource_group_name = azurerm_resource_group.afsal_app_rg.name
   size                = "Standard_B1s"
-  admin_username      = "admin"
+  admin_username      = "adminuser"
   admin_password      = "Password1234!"
 
   network_interface_ids = [azurerm_network_interface.nic-web.id]
@@ -26,7 +26,7 @@ resource "azurerm_linux_virtual_machine" "vm-web" {
     connection {
       type        = "ssh"
       host        = azurerm_linux_virtual_machine.vm-web.public_ip_address
-      user        = "admin"
+      user        = "adminuser"
       password    = "Password1234!"
       timeout     = "2m"
       agent       = false
@@ -45,7 +45,7 @@ resource "azurerm_linux_virtual_machine" "vm-app" {
   location            = azurerm_resource_group.afsal_app_rg.location
   resource_group_name = azurerm_resource_group.afsal_app_rg.name
   size                = "Standard_B1s"
-  admin_username      = "admin"
+  admin_username      = "adminuser"
   admin_password      = "Password1234!"
 
   network_interface_ids = [azurerm_network_interface.nic-app.id]
@@ -77,7 +77,7 @@ resource "azurerm_linux_virtual_machine" "vm-db" {
   location            = azurerm_resource_group.afsal_app_rg.location
   resource_group_name = azurerm_resource_group.afsal_app_rg.name
   size                = "Standard_B1s"
-  admin_username      = "admin"
+  admin_username      = "adminuser"
   admin_password      = "Password1234!"
 
   network_interface_ids = [azurerm_network_interface.nic-db.id]
